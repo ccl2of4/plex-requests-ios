@@ -27,17 +27,36 @@ class RequestsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBAction func editingChanged(textField: UITextField) {
         let query = textField.text!
-        self.movies = searchRepository.searchMovies(query)
-        self.tvShows = searchRepository.searchTV(query)
+        searchRepository.searchMovies(query) { (movies) in
+            self.movies = movies
+            self.moviesTableView.reloadData()
+        }
+        searchRepository.searchTV(query) { (tvShows) in
+            self.tvShows = tvShows
+            self.tvShowsTableView.reloadData()
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        if (tableView == self.moviesTableView) {
+            return self.movies?.count ?? 0
+        } else if (tableView == self.tvShowsTableView) {
+            return self.tvShows?.count ?? 0
+        }
+        return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(CellReuseIdentifier, forIndexPath: indexPath)
-        cell.textLabel!.text = "hello!"
+        var request:Request?;
+        if (tableView == self.moviesTableView) {
+            request = self.movies?[indexPath.row]
+        } else if (tableView == self.tvShowsTableView) {
+            request = self.tvShows?[indexPath.row]
+        }
+        
+        cell.textLabel?.text = request?.name
+        
         return cell
     }
 

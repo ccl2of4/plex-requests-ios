@@ -7,13 +7,22 @@
 //
 
 import UIKit
+import ObjectMapper
 
-class Request: NSObject {
+class Request: Mappable {
 
     var requestId: String?
     var name: String?
     var date: String?
     var type: String?
     var comments: [Any]?
+ 
+    required init?(_ map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        name <- map["name"]
+    }
     
 }
