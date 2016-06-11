@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  API.swift
 //  PlexRequests
 //
 //  Created by Connor Lirot on 6/5/16.

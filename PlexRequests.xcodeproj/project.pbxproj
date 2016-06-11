@@ -20,6 +20,9 @@
 		B3DF30FC1D03707000E667B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3DF30FA1D03707000E667B0 /* LaunchScreen.storyboard */; };
 		B3DF31071D03707000E667B0 /* PlexRequestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF31061D03707000E667B0 /* PlexRequestsTests.swift */; };
 		B3DF31121D03707000E667B0 /* PlexRequestsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF31111D03707000E667B0 /* PlexRequestsUITests.swift */; };
+		B3E875821D0C614C00C2ADB5 /* ExistingRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E875801D0C614C00C2ADB5 /* ExistingRequestsViewController.swift */; };
+		B3E875831D0C614C00C2ADB5 /* ExistingRequestsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E875811D0C614C00C2ADB5 /* ExistingRequestsViewController.xib */; };
+		B3E875851D0C663700C2ADB5 /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E875841D0C663700C2ADB5 /* ViewControllers.swift */; };
 		F4607EDFF6E3BD68AC4F9759 /* Pods_PlexRequestsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B82C8211914809AD74E10B93 /* Pods_PlexRequestsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +66,9 @@
 		B3DF310D1D03707000E667B0 /* PlexRequestsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlexRequestsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DF31111D03707000E667B0 /* PlexRequestsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlexRequestsUITests.swift; sourceTree = "<group>"; };
 		B3DF31131D03707000E667B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3E875801D0C614C00C2ADB5 /* ExistingRequestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExistingRequestsViewController.swift; sourceTree = "<group>"; };
+		B3E875811D0C614C00C2ADB5 /* ExistingRequestsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExistingRequestsViewController.xib; sourceTree = "<group>"; };
+		B3E875841D0C663700C2ADB5 /* ViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
 		B82C8211914809AD74E10B93 /* Pods_PlexRequestsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlexRequestsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B929929E4925337A7D46EDCC /* Pods-PlexRequests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlexRequests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlexRequests/Pods-PlexRequests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDEC09071B3CFC1E45C6CEFC /* Pods-PlexRequestsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlexRequestsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlexRequestsTests/Pods-PlexRequestsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 				B325524A1D037776005298CF /* Model */,
 				B32552431D0371B4005298CF /* Controller */,
 				B325523F1D037124005298CF /* AppDelegate.swift */,
+				B3E875841D0C663700C2ADB5 /* ViewControllers.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -135,6 +142,8 @@
 			children = (
 				B32552461D037359005298CF /* RequestsViewController.swift */,
 				B32552471D037359005298CF /* RequestsViewController.xib */,
+				B3E875801D0C614C00C2ADB5 /* ExistingRequestsViewController.swift */,
+				B3E875811D0C614C00C2ADB5 /* ExistingRequestsViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -338,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B32552491D037359005298CF /* RequestsViewController.xib in Resources */,
+				B3E875831D0C614C00C2ADB5 /* ExistingRequestsViewController.xib in Resources */,
 				B3DF30FC1D03707000E667B0 /* LaunchScreen.storyboard in Resources */,
 				B3DF30F91D03707000E667B0 /* Assets.xcassets in Resources */,
 			);
@@ -489,9 +499,11 @@
 			files = (
 				B32552481D037359005298CF /* RequestsViewController.swift in Sources */,
 				B384557A1D049966008E5183 /* API.swift in Sources */,
+				B3E875851D0C663700C2ADB5 /* ViewControllers.swift in Sources */,
 				B3A4DCEF1D04846900FE3327 /* SearchRepository.swift in Sources */,
 				B3A4DCF51D04847C00FE3327 /* Request.swift in Sources */,
 				B32552411D037124005298CF /* AppDelegate.swift in Sources */,
+				B3E875821D0C614C00C2ADB5 /* ExistingRequestsViewController.swift in Sources */,
 				B3A4DCF41D04847C00FE3327 /* Comment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

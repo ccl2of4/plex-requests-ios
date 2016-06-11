@@ -20,8 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.backgroundColor = UIColor.whiteColor()
         self.window!.makeKeyAndVisible()
         
-        let viewController = RequestsViewController()
-        self.window!.rootViewController = viewController
+        self.window!.rootViewController = ViewControllers.tabBarController
 
         return true
     }
