@@ -16,13 +16,17 @@ class Request: Mappable {
     var date: String?
     var type: String?
     var comments: [Any]?
+    var summary: String?
+    var posterPath: String?
  
     required init?(_ map: Map) {
         
     }
     
     func mapping(map: Map) {
-        name <- map["name"]
+        name       <- map["name"]
+        summary    <- map["summary"]
+        posterPath <- map["poster_path"]
     }
     
 }

@@ -7,6 +7,7 @@ target 'PlexRequests' do
 
   # Pods for PlexRequests
   pod 'AlamofireObjectMapper', '3.0.0'
+  pod 'HanekeSwift', '0.10.1'
 
   target 'PlexRequestsTests' do
     inherit! :search_paths

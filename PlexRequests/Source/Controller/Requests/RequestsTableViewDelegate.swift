@@ -22,10 +22,15 @@ class RequestsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataS
     init(tableView: UITableView) {
         self.tableView = tableView
         super.init()
-        
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: CellReuseIdentifier)
+        setUpTableView()
+    }
+    
+    func setUpTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.registerNib(UINib.init(nibName: "RequestTableViewCell", bundle: nil), forCellReuseIdentifier: CellReuseIdentifier)
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,11 +42,9 @@ class RequestsTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(CellReuseIdentifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(CellReuseIdentifier, forIndexPath: indexPath) as! RequestTableViewCell
         let request = requests?[indexPath.row]
-        
-        cell.textLabel!.text = request?.name
-        
+        cell.request = request
         return cell
     }
     
